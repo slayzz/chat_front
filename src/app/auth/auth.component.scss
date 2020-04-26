@@ -1,0 +1,11 @@
+@import 'constants.scss';
+
+.auth-screen {
+  background: url('/assets/auth/screen.jpg') center center fixed;
+
+  &__title {
+    color: #fff;
+    opacity: .6;
+    padding-top: 64px;
+  }
+}

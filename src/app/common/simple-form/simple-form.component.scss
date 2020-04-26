@@ -1,0 +1,19 @@
+.container {
+
+  &__header {
+    margin: 12px 0 12px 0;
+  }
+
+  mat-card-content {
+    min-height: 280px;
+    min-width: 250px;
+  }
+}
+
+.form {
+  flex: 1 1 auto;
+
+  &__submit {
+
+  }
+}

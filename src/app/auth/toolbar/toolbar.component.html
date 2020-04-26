@@ -1,0 +1,24 @@
+<mat-toolbar color="primary" class="toolbar">
+  <button routerLink="" mat-button>Auth Page</button>
+  <span class="toolbar__fill"></span>
+  <nav mat-tab-nav-bar backgroundColor="primary" class="toolbar__nav">
+    <a mat-tab-link
+       class="toolbar__link"
+       routerLink="sign-in"
+       routerLinkActive="" #rlaSignIn="routerLinkActive"
+       [active]="rlaSignIn.isActive"
+    >
+      <mat-icon style="margin: 5px">home</mat-icon>
+      Sign in
+    </a>
+    <a mat-tab-link
+       class="toolbar__link"
+       routerLink="login"
+       routerLinkActive="" #rlaLogin="routerLinkActive"
+       [active]="rlaLogin.isActive"
+    >
+      <mat-icon style="margin: 5px">home</mat-icon>
+      Log in
+    </a>
+  </nav>
+</mat-toolbar>

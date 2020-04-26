@@ -1,0 +1,27 @@
+<mat-card [@fadeInOut] class="container" fxLayout="column" fxLayoutAlign="start center">
+  <h2 class="container__header">{{title}}</h2>
+  <mat-card-content fxLayout="column">
+
+    <form [formGroup]="form" class="form" fxLayout="column" fxLayoutGap="8px" fxLayoutAlign="space-around center"
+          (ngSubmit)="submit($event)">
+
+      <div fxLayout="column" fxFill>
+        <mat-form-field *ngFor="let template of templates">
+
+          <mat-label>{{template.label}}</mat-label>
+          <input [type]="template.controlType" matInput [placeholder]="template.placeholder"
+                 [formControlName]="template.key"
+                 [required]="template.required">
+          <mat-error *ngIf="form.controls[template.key].hasError('required')">
+            {{template.label}} is <strong>required</strong>
+          </mat-error>
+
+        </mat-form-field>
+      </div>
+
+      <button type="submit" class="form__submit" mat-raised-button color="primary">Submit</button>
+
+    </form>
+
+  </mat-card-content>
+</mat-card>
